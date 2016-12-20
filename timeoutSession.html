@@ -1,0 +1,21 @@
+<!DOCTYPE html >
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="X-Frame-Options" content="deny">
+  </head>
+  <body ng-controller="AppCtrl as appCtrl" id="appCtrlId">
+    <div class="container">
+        <div ng-controller="sessionExpiredModalCtrl">
+				<!-- Session expired modal directive -->
+				<div ng-if="checkStatus">
+					<session-expire-modal status-code="checkStatus"></session-expire-modal>
+				</div>
+			</div>
+			<div ng-controller="sessionRefreshCtrl">
+				<div>
+					<ng-include src="'${asset.server}/public/partials/sessionRefreshPopup.html'"></ng-include>
+				</div>
+			</div>
+			</div>
+</body>
+</html>
